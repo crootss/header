@@ -1,3 +1,10 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -8,19 +15,20 @@ body {
     top: 0;
     background-color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Pastikan semua elemen sejajar vertikal */
+    justify-content: space-between; /* Elemen di kiri dan kanan */
+    align-items: center; /* Sejajarkan secara vertikal */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
+    height: 60px; /* Tinggi konsisten untuk header */
 }
 
 /* Search Container */
 .search-container {
     display: flex;
-    align-items: center; /* Sejajarkan ikon dan input secara vertikal */
-    gap: 10px; /* Beri jarak antara ikon dan input */
-    flex-grow: 1;
+    align-items: center; /* Pastikan ikon dan input sejajar vertikal */
+    gap: 10px; /* Jarak antara ikon dan input */
+    flex-grow: 1; /* Isi ruang kosong yang tersedia */
     max-width: 500px;
 }
 
@@ -30,21 +38,21 @@ body {
 }
 
 .search-input {
-    width: 100%; /* Isi sisa ruang yang tersedia */
-    padding: 8px 12px; /* Tambahkan padding untuk ukuran seragam */
+    width: 100%; /* Input memenuhi ruang kosong */
+    padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
     font-size: 14px;
-    height: 40px; /* Tetapkan tinggi yang konsisten */
-    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran */
+    height: 40px; /* Konsistensi tinggi dengan ikon */
+    box-sizing: border-box;
 }
 
 /* Menu Icons */
 .menu-icons {
     display: flex;
     align-items: center; /* Sejajarkan ikon secara vertikal */
-    gap: 15px; /* Beri jarak antar ikon */
+    gap: 15px; /* Jarak antar ikon */
 }
 
 .menu-icons i {
@@ -52,8 +60,7 @@ body {
     color: #555;
     cursor: pointer;
     transition: color 0.3s;
-    height: 40px; /* Tinggi konsisten dengan input */
-    line-height: 40px; /* Sejajarkan teks di tengah */
+    height: 40px; /* Konsistensi tinggi dengan input */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,13 +73,14 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
+        flex-direction: column; /* Elemen berjejer vertikal di layar kecil */
         align-items: flex-start;
         padding: 15px;
+        height: auto; /* Sesuaikan tinggi */
     }
 
     .menu-icons {
-        justify-content: flex-end;
+        justify-content: flex-start;
         width: 100%;
     }
 }
