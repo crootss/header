@@ -1,37 +1,36 @@
-/* Reset Styles */
+/* Reset Padding dan Margin untuk Semua Elemen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 0 20px;
+    overflow-x: hidden; /* Hindari scroll horizontal */
 }
 
 /* Header Styling */
 .header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0; /* Pastikan header menempel di kiri */
+    width: 100%; /* Ambil seluruh lebar layar */
     display: flex;
     justify-content: space-between; /* Logo di kiri, ikon di kanan */
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Jarak internal header */
     background: rgba(0, 0, 0, 0); /* Transparan awal */
     color: white;
     z-index: 1000;
     transition: background 0.3s ease-in-out; /* Animasi transisi */
 }
 
-/* Header Berubah */
-.header.scrolled {
-    background: rgba(0, 0, 0, 0.7); /* Abu transparan */
-}
-
-/* Logo Container */
+/* Logo Styling */
 .logo {
     display: flex;
     align-items: center;
@@ -68,7 +67,8 @@ body {
 
 /* Content Styling */
 .content {
-    margin-top: 80px; /* Beri jarak agar konten tidak tertimpa header */
+    margin-top: 80px; /* Beri jarak agar tidak tertutup oleh header */
+    padding: 0 20px; /* Jarak dari sisi kiri dan kanan */
 }
 
 .content h1 {
@@ -79,4 +79,15 @@ body {
 .content p {
     margin-bottom: 15px;
     color: #333;
+}
+
+/* Mode Mobile (Responsif) */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px; /* Pastikan padding kiri-kanan konsisten di mobile */
+    }
+
+    .content {
+        padding: 0 15px; /* Sesuaikan padding untuk layar kecil */
+    }
 }
