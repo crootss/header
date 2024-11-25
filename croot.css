@@ -15,31 +15,29 @@ body {
     top: 0;
     background-color: white;
     display: flex;
-    justify-content: space-between; /* Elemen kiri-kanan */
-    align-items: center; /* Sejajarkan secara vertikal */
+    justify-content: space-between; /* Elemen kiri-kanan terpisah */
+    align-items: center; /* Sejajarkan vertikal */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
-    height: auto; /* Ubah tinggi menjadi fleksibel */
+    height: auto; /* Tinggi fleksibel */
 }
 
 /* Search Container */
 .search-container {
     display: flex;
-    align-items: center; /* Ikon dan input sejajar vertikal */
-    gap: 10px; /* Jarak antara ikon dan input */
-    flex-grow: 1; /* Isi ruang kosong */
-    width: 100%; /* Penuh pada mobile */
-    margin-bottom: 10px; /* Tambahkan jarak bawah */
+    align-items: center; /* Ikon dan input sejajar secara vertikal */
+    flex-grow: 1; /* Isi ruang kosong yang tersedia */
 }
 
 .search-icon {
     font-size: 18px;
     color: #888;
+    margin-right: 10px; /* Jarak antara ikon pencarian dan input */
 }
 
 .search-input {
-    width: 100%; /* Isi ruang kosong */
+    width: 100%; /* Input memenuhi ruang tersisa */
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -51,10 +49,8 @@ body {
 /* Menu Icons */
 .menu-icons {
     display: flex;
-    justify-content: space-between; /* Ikon tersebar rata */
-    align-items: center; /* Sejajarkan vertikal */
-    width: 100%; /* Ambil lebar penuh */
-    gap: 10px; /* Tambahkan jarak antar ikon */
+    align-items: center; /* Sejajarkan ikon secara vertikal */
+    gap: 10px; /* Jarak antar ikon */
 }
 
 .menu-icons i {
@@ -62,11 +58,11 @@ body {
     color: #555;
     cursor: pointer;
     transition: color 0.3s;
-    height: 40px; /* Konsistensi tinggi */
-    width: 40px; /* Konsistensi lebar */
+    height: 40px; /* Tinggi konsisten dengan input */
+    width: 40px; /* Ikon memiliki lebar tetap */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Sejajarkan ikon di tengah */
 }
 
 .menu-icons i:hover {
@@ -76,17 +72,19 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Berubah menjadi kolom */
-        align-items: flex-start;
+        flex-direction: row; /* Tetap sejajar horizontal */
+        align-items: center; /* Elemen tetap sejajar vertikal */
         padding: 10px;
     }
 
     .search-container {
-        width: 100%; /* Search bar menyesuaikan lebar penuh */
+        flex-grow: 1; /* Isi ruang kosong */
+        display: flex;
+        align-items: center; /* Sejajarkan ikon dan input vertikal */
+        margin-right: 10px; /* Beri jarak antara search bar dan ikon menu */
     }
 
     .menu-icons {
-        justify-content: space-around; /* Ikon tersebar rata */
-        width: 100%; /* Ambil lebar penuh */
+        justify-content: flex-end; /* Ikon tetap di sisi kanan */
     }
 }
