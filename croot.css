@@ -15,12 +15,12 @@ body {
     top: 0;
     background-color: white;
     display: flex;
-    justify-content: space-between; /* Elemen kiri-kanan */
-    align-items: center; /* Sejajarkan vertikal */
+    justify-content: space-between; /* Pisahkan elemen kiri-kanan */
+    align-items: center; /* Sejajarkan secara vertikal */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
-    height: 60px; /* Tinggi header konsisten */
+    height: 60px; /* Tinggi header tetap */
 }
 
 /* Search Container */
@@ -28,35 +28,29 @@ body {
     display: flex;
     align-items: center; /* Ikon dan input sejajar vertikal */
     gap: 10px; /* Jarak antara ikon dan input */
-    flex-grow: 1; /* Isi ruang kosong di tengah */
-    max-width: 500px; /* Batas lebar maksimum */
+    flex-grow: 1; /* Isi ruang kosong */
+    max-width: 500px; /* Batasi lebar maksimal */
 }
 
 .search-icon {
     font-size: 18px;
     color: #888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px; /* Tinggi konsisten */
-    width: 40px; /* Lebar konsisten */
 }
 
 .search-input {
-    width: 100%; /* Input menyesuaikan ruang kosong */
+    width: 100%; /* Isi ruang kosong */
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
     font-size: 14px;
-    height: 40px; /* Tinggi input sama dengan ikon */
-    box-sizing: border-box;
+    height: 40px; /* Tinggi input konsisten */
 }
 
 /* Menu Icons */
 .menu-icons {
     display: flex;
-    align-items: center; /* Ikon sejajar vertikal */
+    align-items: center; /* Sejajarkan ikon secara vertikal */
     gap: 15px; /* Jarak antar ikon */
 }
 
@@ -65,11 +59,10 @@ body {
     color: #555;
     cursor: pointer;
     transition: color 0.3s;
-    height: 40px; /* Tinggi ikon konsisten */
-    width: 40px; /* Lebar ikon konsisten */
+    height: 40px; /* Konsistensi tinggi */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Sejajarkan di tengah secara vertikal */
 }
 
 .menu-icons i:hover {
@@ -79,9 +72,8 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Elemen berjejer vertikal di layar kecil */
+        flex-direction: column; /* Berubah menjadi vertikal */
         align-items: flex-start;
-        padding: 15px;
         height: auto; /* Tinggi fleksibel */
     }
 
