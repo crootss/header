@@ -9,15 +9,17 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 0 20px;
+    overflow-x: hidden; /* Hindari scroll horizontal */
 }
 
 /* Header Styling */
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Logo di kiri, ikon di kanan */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0); /* Transparan awal */
@@ -26,7 +28,7 @@ body {
     transition: background 0.3s ease-in-out; /* Animasi transisi */
 }
 
-/* Header Berubah */
+/* Header Saat Scroll */
 .header.scrolled {
     background: rgba(0, 0, 0, 0.7); /* Abu transparan */
 }
@@ -69,6 +71,7 @@ body {
 /* Content Styling */
 .content {
     margin-top: 80px; /* Beri jarak agar konten tidak tertimpa header */
+    padding: 0 20px; /* Jarak kiri dan kanan */
 }
 
 .content h1 {
