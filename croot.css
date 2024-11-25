@@ -72,13 +72,26 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Berubah menjadi vertikal */
+        flex-direction: column; /* Berubah menjadi kolom */
         align-items: flex-start;
-        height: auto; /* Tinggi fleksibel */
+        padding: 10px;
+    }
+
+    .search-container {
+        width: 100%; /* Search bar menyesuaikan lebar penuh */
+        margin-bottom: 10px; /* Jarak bawah */
     }
 
     .menu-icons {
-        justify-content: flex-start;
-        width: 100%;
+        width: 100%; /* Ikon mengambil seluruh lebar */
+        display: flex; /* Pastikan ikon tetap flex */
+        justify-content: space-between; /* Pisahkan ikon dengan jarak */
+        align-items: center; /* Sejajarkan vertikal */
+    }
+
+    .menu-icons i {
+        width: auto; /* Ikon tetap ukuran normal */
+        text-align: center;
     }
 }
+
