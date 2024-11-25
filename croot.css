@@ -15,12 +15,12 @@ body {
     top: 0;
     background-color: white;
     display: flex;
-    justify-content: space-between; /* Pisahkan elemen kiri-kanan */
+    justify-content: space-between; /* Elemen kiri-kanan */
     align-items: center; /* Sejajarkan secara vertikal */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
-    height: 60px; /* Tinggi header tetap */
+    height: auto; /* Ubah tinggi menjadi fleksibel */
 }
 
 /* Search Container */
@@ -29,7 +29,8 @@ body {
     align-items: center; /* Ikon dan input sejajar vertikal */
     gap: 10px; /* Jarak antara ikon dan input */
     flex-grow: 1; /* Isi ruang kosong */
-    max-width: 500px; /* Batasi lebar maksimal */
+    width: 100%; /* Penuh pada mobile */
+    margin-bottom: 10px; /* Tambahkan jarak bawah */
 }
 
 .search-icon {
@@ -50,8 +51,10 @@ body {
 /* Menu Icons */
 .menu-icons {
     display: flex;
-    align-items: center; /* Sejajarkan ikon secara vertikal */
-    gap: 15px; /* Jarak antar ikon */
+    justify-content: space-between; /* Ikon tersebar rata */
+    align-items: center; /* Sejajarkan vertikal */
+    width: 100%; /* Ambil lebar penuh */
+    gap: 10px; /* Tambahkan jarak antar ikon */
 }
 
 .menu-icons i {
@@ -60,9 +63,10 @@ body {
     cursor: pointer;
     transition: color 0.3s;
     height: 40px; /* Konsistensi tinggi */
+    width: 40px; /* Konsistensi lebar */
     display: flex;
     justify-content: center;
-    align-items: center; /* Sejajarkan di tengah secara vertikal */
+    align-items: center;
 }
 
 .menu-icons i:hover {
@@ -79,19 +83,10 @@ body {
 
     .search-container {
         width: 100%; /* Search bar menyesuaikan lebar penuh */
-        margin-bottom: 10px; /* Jarak bawah */
     }
 
     .menu-icons {
-        width: 100%; /* Ikon mengambil seluruh lebar */
-        display: flex; /* Pastikan ikon tetap flex */
-        justify-content: space-between; /* Pisahkan ikon dengan jarak */
-        align-items: center; /* Sejajarkan vertikal */
-    }
-
-    .menu-icons i {
-        width: auto; /* Ikon tetap ukuran normal */
-        text-align: center;
+        justify-content: space-around; /* Ikon tersebar rata */
+        width: 100%; /* Ambil lebar penuh */
     }
 }
-
