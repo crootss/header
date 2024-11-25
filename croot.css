@@ -16,7 +16,7 @@ body {
     background-color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Pastikan semua elemen sejajar vertikal */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
@@ -25,8 +25,8 @@ body {
 /* Search Container */
 .search-container {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* Sejajarkan ikon dan input secara vertikal */
+    gap: 10px; /* Beri jarak antara ikon dan input */
     flex-grow: 1;
     max-width: 500px;
 }
@@ -37,19 +37,21 @@ body {
 }
 
 .search-input {
-    width: 100%;
-    padding: 8px 12px;
+    width: 100%; /* Isi sisa ruang yang tersedia */
+    padding: 8px 12px; /* Tambahkan padding untuk ukuran seragam */
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
     font-size: 14px;
+    height: 40px; /* Tetapkan tinggi yang konsisten */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran */
 }
 
 /* Menu Icons */
 .menu-icons {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: center; /* Sejajarkan ikon secara vertikal */
+    gap: 15px; /* Beri jarak antar ikon */
 }
 
 .menu-icons i {
@@ -57,6 +59,11 @@ body {
     color: #555;
     cursor: pointer;
     transition: color 0.3s;
+    height: 40px; /* Tinggi konsisten dengan input */
+    line-height: 40px; /* Sejajarkan teks di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-icons i:hover {
