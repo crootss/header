@@ -60,6 +60,7 @@ body {
 .actions {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .actions .contact {
     position: relative;
@@ -151,5 +152,6 @@ body {
     }
     .actions {
         margin-left: 0;
+        gap: 5px;
     }
 }
