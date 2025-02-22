@@ -8,15 +8,20 @@ body {
 }
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.5);
     color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .logo {
     font-size: 24px;
     font-weight: bold;
+    margin-right: 20px;
 }
 .menu {
     display: flex;
@@ -33,6 +38,7 @@ body {
 .actions {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 .actions button {
     margin-left: 10px;
