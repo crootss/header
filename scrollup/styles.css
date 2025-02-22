@@ -74,20 +74,54 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
 }
+
+.actions .contact {
+    position: relative;
+    padding: 8px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.actions .contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease-in-out;
+}
+
+.actions .contact:hover::before {
+    left: 0;
+}
+
 .actions .contact:hover {
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 28px;
     border-left: 4px solid white;
 }
+
 .actions .contact::after {
     content: "→";
     position: absolute;
     right: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
+    /* transition: opacity 0.3s ease-in-out; */
 }
+
 .actions .contact:hover::after {
     opacity: 1;
+    right: 10px;
 }
+
 .actions .build {
     background: white;
     color: black;
