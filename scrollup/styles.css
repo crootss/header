@@ -96,6 +96,7 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.2);
     transition: left 0.3s ease-in-out;
+    z-index: -1;
 }
 
 .actions .contact:hover::before {
@@ -106,15 +107,15 @@ body {
     padding-left: 24px;
     padding-right: 28px;
     border-left: 4px solid white;
+    border-right: 2px solid white;
 }
 
 .actions .contact::after {
     content: "→";
     position: absolute;
-    right: 10px;
+    right: -15px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
-    /* transition: opacity 0.3s ease-in-out; */
 }
 
 .actions .contact:hover::after {
