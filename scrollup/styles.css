@@ -70,6 +70,23 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.actions .contact:hover {
+    padding-right: 20px;
+    border-left: 4px solid white;
+}
+.actions .contact::after {
+    content: "→";
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.actions .contact:hover::after {
+    opacity: 1;
 }
 .actions .build {
     background: white;
