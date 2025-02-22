@@ -85,6 +85,8 @@ body {
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
 }
 
 .actions .contact::before {
@@ -105,15 +107,14 @@ body {
 
 .actions .contact:hover {
     padding-left: 24px;
-    padding-right: 28px;
+    padding-right: 32px;
     border-left: 4px solid white;
-    border-right: 2px solid white;
 }
 
 .actions .contact::after {
     content: "→";
     position: absolute;
-    right: -15px;
+    right: -20px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
 }
@@ -130,11 +131,41 @@ body {
     display: flex;
     align-items: center;
     padding: 8px 15px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
+
+.actions .build::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+}
+
+.actions .build:hover::before {
+    left: 0;
+}
+
+.actions .build:hover {
+    transform: scale(1.05);
+}
+
 .actions .build img {
     width: 20px;
     margin-right: 5px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.actions .build:hover img {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .menu {
         display: none;
