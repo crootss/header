@@ -154,4 +154,7 @@ body {
         margin-left: 0;
         gap: 5px;
     }
+    .actions .build {
+        display: none;
+    }
 }
