@@ -148,8 +148,9 @@ header .actions .build:hover img {
 @media (max-width: 768px) {
     header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+/*         justify-content: space-between;
+        align-items: center; */
     }
     header .menu {
         display: none;
