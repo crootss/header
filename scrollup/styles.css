@@ -14,20 +14,17 @@ header {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
-    position: fixed; /* Ubah absolute ke fixed agar tetap di layar saat scroll */
-    /* position: absolute; */
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000; /* Tambahkan z-index agar tetap di atas */
 }
 header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Gunakan flex agar posisi otomatis berada di tengah */
-/*     position: absolute;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%); */
+    transform: translateX(-50%);
 }
 header .logo img {
     height: 70px;
@@ -145,34 +142,11 @@ header .actions .build img {
 header .actions .build:hover img {
     transform: scale(1.1);
 }
-
-main {
-    width: 100%; /* Lebar penuh */
-    max-width: 1200px; /* Maksimal lebar agar konten tidak terlalu besar */
-    margin: 80px auto 0; /* Beri margin atas agar tidak tertutup header */
-    padding: 20px; /* Ruang dalam */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main img {
-    width: 100%; /* Lebar penuh */
-    max-width: 100vw; /* Maksimal sesuai lebar layar */
-    height: auto; /* Jaga proporsi gambar */
-    object-fit: cover; /* Menyesuaikan gambar agar tetap proporsional */
-    border-radius: 10px; /* Opsional: Beri sudut tumpul agar lebih estetis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Efek bayangan */
-}
-
-
-
 @media (max-width: 768px) {
     header {
         display: flex;
-        justify-content: center;
-/*         justify-content: space-between;
-        align-items: center; */
+        justify-content: space-between;
+        align-items: center;
     }
     header .menu {
         display: none;
@@ -183,13 +157,5 @@ main img {
     }
     header .actions .build {
         display: none;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    main img {
-        border-radius: 5px; /* Sudut lebih kecil di layar kecil */
     }
 }
