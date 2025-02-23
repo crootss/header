@@ -6,7 +6,7 @@
 body {
     font-family: Arial, sans-serif;
 }
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,37 +14,40 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
-    position: absolute;
+    position: fixed; /* Ubah absolute ke fixed agar tetap di layar saat scroll */
+    /* position: absolute; */
     top: 0;
     left: 0;
+    z-index: 1000; /* Tambahkan z-index agar tetap di atas */
 }
-.logo {
+header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    flex-grow: 1; /* Gunakan flex agar posisi otomatis berada di tengah */
+/*     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
 }
-.logo img {
+header .logo img {
     height: 70px;
 }
-.menu {
+header .menu {
     display: flex;
     list-style: none;
 }
-.menu li {
+header .menu li {
     margin: 0 15px;
     position: relative;
 }
-.menu a {
+header .menu a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     position: relative;
     display: inline-block;
 }
-.menu a::after {
+header .menu a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -54,16 +57,16 @@ body {
     background: white;
     transition: width 0.3s ease-in-out;
 }
-.menu a:hover::after {
+header .menu a:hover::after {
     width: 100%;
 }
-.actions {
+header .actions {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-left: auto;
 }
-.actions .contact {
+header .actions .contact {
     position: relative;
     padding: 8px 20px;
     border: 2px solid white;
@@ -76,7 +79,7 @@ body {
     display: inline-flex;
     align-items: center;
 }
-.actions .contact::before {
+header .actions .contact::before {
     content: "";
     position: absolute;
     top: 0;
@@ -87,26 +90,26 @@ body {
     transition: left 0.3s ease-in-out;
     z-index: -1;
 }
-.actions .contact:hover::before {
+header .actions .contact:hover::before {
     left: 0;
 }
-.actions .contact:hover {
+header .actions .contact:hover {
     padding-left: 24px;
     padding-right: 32px;
     border-left: 4px solid white;
 }
-.actions .contact::after {
+header .actions .contact::after {
     content: "→";
     position: absolute;
     right: -20px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
 }
-.actions .contact:hover::after {
+header .actions .contact:hover::after {
     opacity: 1;
     right: 10px;
 }
-.actions .build {
+header .actions .build {
     background: white;
     color: black;
     border: none;
@@ -118,7 +121,7 @@ body {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
-.actions .build::before {
+header .actions .build::before {
     content: "";
     position: absolute;
     top: 0;
@@ -128,34 +131,34 @@ body {
     background: rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease-in-out;
 }
-.actions .build:hover::before {
+header .actions .build:hover::before {
     left: 0;
 }
-.actions .build:hover {
+header .actions .build:hover {
     transform: scale(1.05);
 }
-.actions .build img {
+header .actions .build img {
     width: 20px;
     margin-right: 5px;
     transition: transform 0.3s ease-in-out;
 }
-.actions .build:hover img {
+header .actions .build:hover img {
     transform: scale(1.1);
 }
 @media (max-width: 768px) {
-    .header {
+    header {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .menu {
+    header .menu {
         display: none;
     }
-    .actions {
+    header .actions {
         margin-left: auto;
         gap: 5px;
     }
-    .actions .build {
+    header .actions .build {
         display: none;
     }
 }
