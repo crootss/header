@@ -160,6 +160,68 @@ header .actions .build:hover img {
     transform: scale(1.1);
 }
 
+/* Menu Mobile */
+header .menu-mobile {
+    display: none; /* Default: Sembunyi */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+header .menu-mobile .close-btn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+header .menu-mobile .close-btn span {
+    margin-left: 8px;
+}
+
+header .menu-mobile .menu-mobile-content a {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+header .menu-mobile .menu-mobile-content a:hover {
+    color: #000;
+}
+
+header .menu-mobile .menu-mobile-content .menu-divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+header .menu-mobile .contact-info {
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+}
+
+header .menu-mobile .contact-info a {
+    color: #444;
+    text-decoration: none;
+}
+
+header .menu-mobile .contact-info a:hover {
+    text-decoration: underline;
+}
+
 main {
     width: 100%; /* Lebar penuh */
     max-width: 1200px; /* Maksimal lebar agar konten tidak terlalu besar */
