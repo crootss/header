@@ -19,6 +19,22 @@ header {
     top: 0;
     left: 0;
 }
+
+/* Default: Sembunyikan burger menu di desktop */
+header button.burger-menu {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
 header .logo {
     display: flex;
     justify-content: center;
