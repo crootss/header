@@ -164,7 +164,6 @@ main {
     width: 100%; /* Lebar penuh */
     max-width: 1200px; /* Maksimal lebar agar konten tidak terlalu besar */
     margin: -93px auto 0; /* Beri margin minus agar dibelakang header */
-    padding: 20px; /* Ruang dalam */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,9 +197,6 @@ main img {
     }
     header .actions .build {
         display: none;
-    }
-    main {
-        padding: 0px;
     }
 
     main img {
