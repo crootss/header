@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+<header style="transition-timing-function:ease-in-out" class="fixed top-0 left-0 right-0 z-[500] px-[30px] pt-[30px] pb-[20px] flex flex-col gap-[20px] transition-all duration-300">
+    <div class="h-[40px] flex justify-center items-center rounded-[10px] text-center backdrop-blur-lg bg-white bg-opacity-70">
+       <p class="font-general font-[400] text-[13px] lg:text-[13px] [&amp;_a]:underline text-noovo-black [&amp;_span]:underline">Join us for the <a href="/van-events/noovo-open-house" title="Noovo Open House event page">Noovo Open House</a>, April 5th &amp; 6th at our Vegas headquarters!</p>
+    </div>
+    <nav class="relative transition-all duration-500 ">
+       <div class="relative z-[2] flex justify-between lg:justify-normal md:grid grid-cols-3 items-center">
+          <div class="col-span-1 flex items-center gap-[20px]">
+             <button class="transition-colors duration-700 h-[44px] text-white" title="Toggle menu">
+                <svg width="20" height="7" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M-1 1H19" stroke="currentColor" stroke-linecap="round"></path>
+                   <path d="M-1 6H19" stroke="currentColor" stroke-linecap="round"></path>
+                </svg>
+             </button>
+             <ul class="hidden lg:flex gap-[32px]">
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="/noovo-lite/">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Lite</p>
+                   </a>
+                </li>
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="/noovo-pop/">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Pop</p>
+                   </a>
+                </li>
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="#">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Plus</p>
+                   </a>
+                </li>
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="/camper-vans-for-sale/">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Inventory</p>
+                   </a>
+                </li>
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="/blog/">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Blog</p>
+                   </a>
+                </li>
+                <li>
+                   <a class="group flex items-center gap-[10px] whitespace-nowrap" href="/rv-reviews/">
+                      <p class="font-general font-[400] text-[14px] lg:text-[14px] leading-[18px] lg:leading-[18px] transition-colors duration-700 text-white after:bg-white relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:transition-transform after:scale-x-0 group-hover:after:scale-x-100 after:origin-left">Reviews</p>
+                   </a>
+                </li>
+             </ul>
+          </div>
+          <div class="col-span-1 flex justify-center ml-[-5px] lg:ml-0">
+             <a href="/">
+                <div class="transition-colors duration-700 origin-left translate-x-[-20px] md:translate-x-[15px] lg:translate-x-[0px] scale-[0.8] lg:scale-[1] text-white">
+                   <svg width="117" height="40" viewBox="0 0 117 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.773 21.7138H15.2982V9.88104C15.2982 6.89378 12.8754 4.47235 9.8865 4.47235C6.89759 4.47235 4.47483 6.89378 4.47483 9.88104V21.7138H0V9.88104C0 4.4243 4.42674 0 9.8865 0C15.3462 0 19.773 4.4243 19.773 9.88104V21.7138Z" fill="currentColor"></path>
+                      <path d="M34.9548 4.47235C38.5548 4.47235 41.4848 7.4007 41.4848 10.9987C41.4848 14.5968 38.5548 17.5251 34.9548 17.5251C31.3548 17.5251 28.4248 14.5968 28.4248 10.9987C28.4248 7.4007 31.3548 4.47235 34.9548 4.47235ZM34.9548 0C28.8777 0 23.95 4.92502 23.95 10.9987C23.95 17.0725 28.8777 21.9975 34.9548 21.9975C41.0319 21.9975 45.9596 17.0725 45.9596 10.9987C45.9596 4.92502 41.0319 0 34.9548 0Z" fill="currentColor"></path>
+                      <path d="M105.995 4.47235C109.595 4.47235 112.525 7.4007 112.525 10.9987C112.525 14.5968 109.595 17.5251 105.995 17.5251C102.395 17.5251 99.4652 14.5968 99.4652 10.9987C99.4652 7.4007 102.395 4.47235 105.995 4.47235ZM105.995 0C99.9181 0 94.9904 4.92502 94.9904 10.9987C94.9904 17.0725 99.9181 21.9975 105.995 21.9975C112.072 21.9975 117 17.0725 117 10.9987C117 4.92502 112.072 0 105.995 0Z" fill="currentColor"></path>
+                      <path d="M88.1021 0.289889L83.6025 16.1873L79.0408 0.289889H74.386L79.7899 19.1265C80.8912 22.9648 86.337 22.9555 87.4243 19.1125L92.7522 0.289889H88.1021Z" fill="currentColor"></path>
+                      <path d="M61.143 4.47235C64.743 4.47235 67.673 7.4007 67.673 10.9987C67.673 14.5968 64.743 17.5251 61.143 17.5251C57.543 17.5251 54.613 14.5968 54.613 10.9987C54.613 7.4007 57.543 4.47235 61.143 4.47235ZM61.143 0C55.0659 0 50.1382 4.92502 50.1382 10.9987C50.1382 17.0725 55.0659 21.9975 61.143 21.9975C67.2201 21.9975 72.1478 17.0725 72.1478 10.9987C72.1478 4.92502 67.2201 0 61.143 0Z" fill="currentColor"></path>
+                      <path d="M8.015 37H7.349V31.141H5.18V30.538H10.184V31.141H8.015V37ZM16.5353 37H15.8603V30.538H18.1643C19.5323 30.538 20.3873 31.249 20.3873 32.491C20.3873 33.463 19.7483 34.192 18.7313 34.363L20.5583 37H19.7483L18.0113 34.444H16.5353V37ZM16.5353 31.105V33.877H18.1103C19.1003 33.877 19.7123 33.391 19.7123 32.491C19.7123 31.591 19.1003 31.105 18.1103 31.105H16.5353ZM30.783 37L30.108 35.209H27.093L26.409 37H25.743L28.254 30.538H28.992L31.494 37H30.783ZM28.605 31.258L27.3 34.66H29.892L28.605 31.258ZM41.1542 30.538L38.7332 37H37.9952L35.5832 30.538H36.2852L38.3732 36.226L40.4792 30.538H41.1542ZM50.731 36.415V37H46.852V30.538H50.668V31.123H47.527V33.373H50.398V33.958H47.527V36.415H50.731ZM60.4448 37H56.7548V30.538H57.4298V36.397H60.4448V37ZM77.909 30.538L75.488 37H74.75L72.338 30.538H73.04L75.128 36.226L77.234 30.538H77.909ZM87.0358 37L86.3608 35.209H83.3458L82.6618 37H81.9958L84.5068 30.538H85.2448L87.7468 37H87.0358ZM84.8578 31.258L83.5528 34.66H86.1448L84.8578 31.258ZM97.893 37L94.122 31.492V37H93.492V30.538H94.239L97.974 35.974V30.538H98.613V37H97.893ZM109.372 35.209C109.372 36.235 108.535 37.09 107.032 37.09C105.529 37.09 104.647 36.253 104.584 35.029H105.268C105.331 35.947 105.907 36.541 107.023 36.541C107.941 36.541 108.661 36.073 108.661 35.299C108.661 34.633 108.283 34.327 107.365 34.138L106.546 33.976C105.691 33.805 104.791 33.409 104.791 32.284C104.791 31.249 105.7 30.448 106.987 30.448C108.247 30.448 109.219 31.24 109.291 32.473H108.598C108.553 31.618 107.923 30.997 106.996 30.997C106.006 30.997 105.475 31.6 105.475 32.248C105.475 33.013 106.123 33.247 106.843 33.391L107.662 33.562C108.751 33.787 109.372 34.237 109.372 35.209Z" fill="currentColor"></path>
+                   </svg>
+                </div>
+             </a>
+          </div>
+          <div class="col-span-1 ">
+             <ul class="flex justify-end gap-[5px] lg:gap-[20px] transition-all duration-200 delay-[300ms]">
+                <li>
+                   <button class="group flex justify-center gap-[10px] items-center rounded-full text-[14px] tracking-[-0.5px] shadow-sm bg-transparent text-white border-[1px] border-[rgba(255,255,255,1)] h-[45px] lg:h-[55px] px-[15px] lg:px-[25px] transition-colors duration-700" type="button">
+                      <div class="flex items-center">
+                         <div>Contact us</div>
+                         <div class="w-[0px] opacity-[0] overflow-hidden flex justify-end group-hover:w-[21px] group-hover:opacity-[1] transition-all duration-500">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                               <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                               <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                         </div>
+                      </div>
+                   </button>
+                </li>
+                <li>
+                   <a class="group px-[25px] flex justify-center gap-[10px] items-center rounded-full text-[14px] tracking-[-0.5px] shadow-sm bg-noovo-white text-noovo-black h-[45px] lg:h-[55px] pl-[5px] lg:pr-[25px] transition-colors duration-700" href="/configure/">
+                      <div class="w-[50px] h-[50px] flex justify-center items-center rounded-full bg-grey">
+                         <div class="h-full aspect-square" style="background-image: url(&quot;/icons/van-black.png&quot;); background-position: center center; background-size: cover; background-repeat: no-repeat;"></div>
+                      </div>
+                      <div class="flex items-center">
+                         <div>Build your van</div>
+                         <div class="w-[0px] opacity-[0] overflow-hidden flex justify-end group-hover:w-[21px] group-hover:opacity-[1] transition-all duration-500">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                               <path d="M14.667 5.72222L0.500324 5.72222ZM8.59556 10.4444L14.667 5.72222ZM8.59556 1L14.667 5.72222Z" fill="currentColor"></path>
+                               <path d="M14.667 5.72222L0.500324 5.72222M14.667 5.72222L8.59556 10.4444M14.667 5.72222L8.59556 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                         </div>
+                      </div>
+                   </a>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </nav>
+ </header>
+
+
+
+
+</body>
+</html>
